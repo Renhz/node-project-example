@@ -1,7 +1,7 @@
 {
   "name": "node-project-example",
   "version": "1.0.0",
-  "description": "node app project example in typescript with package manager, dockerfile, ci script, semantic-release and lint set",
+  "description": "node project example in typescript with package manager, dockerfile, ci script, semantic-release and lint set",
   "main": "index.js",
   "scripts": {
     "develop": "DEBUG='*,-nodemon*,-mqtt-packet:*' nodemon src/index.ts",
