@@ -1,0 +1,19 @@
+{
+  "name": "node-project-example",
+  "version": "1.0.0",
+  "description": "node app project example in typescript with package manager, dockerfile, ci script, semantic-release and lint set",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Renhz/node-project-example.git"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/Renhz/node-project-example/issues"
+  },
+  "homepage": "https://github.com/Renhz/node-project-example#readme"
+}
