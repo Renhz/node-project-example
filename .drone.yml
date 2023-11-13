@@ -38,3 +38,15 @@ steps:
         - master
       event:
         - push
+
+  - name: push
+    image: plugins/docker
+    settings:
+      repo: cicd-so-happy.maxwin.com.tw:5000/node-app-example
+      registry: cicd-so-happy.maxwin.com.tw:5000
+      tags: ${DRONE_TAG}
+      insecure: true
+      dry_run: true
+    when:
+      event:
+        - tag
