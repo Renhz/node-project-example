@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/Renhz/node-project-example/issues"
   },
-  "homepage": "https://github.com/Renhz/node-project-example#readme"
+  "homepage": "https://github.com/Renhz/node-project-example#readme",
+  "packageManager": "yarn@3.6.1"
 }
