@@ -12,14 +12,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     ],\
     "dependencyTreeRoots": [\
       {\
-        "name": "charger-event-subscriber",\
+        "name": "node-app-yarn3-example",\
         "reference": "workspace:."\
       }\
     ],\
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
-      ["charger-event-subscriber", ["workspace:."]]\
+      ["node-app-yarn3-example", ["workspace:."]]\
     ],\
     "fallbackPool": [\
     ],\
@@ -3600,11 +3600,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["charger-event-subscriber", [\
+      ["node-app-yarn3-example", [\
         ["workspace:.", {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["charger-event-subscriber", "workspace:."],\
+            ["node-app-yarn3-example", "workspace:."],\
             ["@commitlint/cli", "npm:17.6.7"],\
             ["@commitlint/config-conventional", "npm:17.6.7"],\
             ["@semantic-release/changelog", "virtual:3683d34c1c0b8396b6bae5c635452f551e5febe2a2ca117b26627962cfa5143b9cac4576d561e0de72ade26a3ed9d5059aec06ab5a990937057727a382ef54dd#npm:6.0.3"],\
