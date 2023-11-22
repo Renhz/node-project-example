@@ -1,19 +1,49 @@
 {
-  "name": "node-project-example",
+  "name": "typescript-example",
   "version": "1.0.0",
-  "description": "node app project example in typescript with package manager, dockerfile, ci script, semantic-release and lint set",
+  "description": "node app project example in typescript with common npm scripts, with semantic-release and lint set",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "develop": "DEBUG=*,-nodemon* nodemon src/index.ts",
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "build-prod": "rm -rf dist && tsc --build tsconfig.prod.json",
+    "start": "node -r ./tsconfig-paths-bootstrap.js dist/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Renhz/node-project-example.git"
+  "author": "Renhz",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@types/jest": "^27.4.1",
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-universe": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.6.2",
+    "semantic-release": "^19.0.2",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
   },
-  "license": "UNLICENSED",
-  "private": true,
-  "bugs": {
-    "url": "https://github.com/Renhz/node-project-example/issues"
-  },
-  "homepage": "https://github.com/Renhz/node-project-example#readme"
+  "jest": {
+    "testEnvironment": "node",
+    "preset": "ts-jest",
+    "moduleNameMapper": {
+      "~/(.*)": "<rootDir>/src/$1"
+    },
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest",
+      "^.+\\.(js)$": "babel-jest"
+    }
+  }
 }
