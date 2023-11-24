@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    // 這避免在沒有引用jest時typescript仍把@types/jest視為全域可見的變數
+    "types": ["node"],
     "target": "es2016",
     "module": "commonjs",
     "baseUrl": "src",
@@ -14,6 +16,8 @@
   "ts-node": {
     "require": ["tsconfig-paths/register"]
   },
-  "include": ["**/*","node_modules/arg"],
-  "exclude": ["src2"],
+  // 測試如何打包node_modules裡面的檔案出來
+  "include": ["**/*", "node_modules/arg"],
+  // 測試exclude跟include **/*衝突時的優先性
+  "exclude": ["src2", "**/*.test.*", "dist"]
 }
