@@ -45,5 +45,8 @@
       "^.+\\.(ts|tsx)$": "ts-jest",
       "^.+\\.(js)$": "babel-jest"
     }
+  },
+  "dependencies": {
+    "tsconfig-paths": "^4.2.0"
   }
 }
