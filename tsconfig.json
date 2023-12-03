@@ -12,6 +12,7 @@
     "skipLibCheck": true,
     "allowJs": true,
     "maxNodeModuleJsDepth": 1,
+    "newLine": "lf",
   },
   "ts-node": {
     "require": ["tsconfig-paths/register"]
